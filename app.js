@@ -1,6 +1,6 @@
 const express = require('express')
 const path = require('path')
-const noris = require('./public/noris')
+
 const request = require('request');
 const  port=process.env.PORT || 3000;
 const url = 'https://api.chucknorris.io/jokes/random';
@@ -17,8 +17,7 @@ app.use(express.static(__dirname + '/public/src'));
 
 
 
-let chuky = noris.joke;
-console.log(chuky);
+
 
 
 app.get('/noris', (req, res) => {
